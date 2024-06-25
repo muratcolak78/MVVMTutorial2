@@ -1,0 +1,29 @@
+﻿<Window x:Class="_01UserControls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_01UserControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="Optionen">
+                <MenuItem Header="Rote Box" 
+                          x:Name="RedMenuItem"  
+                          Click="RedMenuItem_Click"
+                          />
+                <MenuItem Header="Blaue Box"
+                          x:Name="BlueMenuItem"
+                          Click="BlueMenuItem_Click"
+                          />
+            </MenuItem>
+        </Menu>
+        <ContentControl 
+            x:Name="MainContent" Grid.Row="1" />
+    </Grid>
+</Window>
